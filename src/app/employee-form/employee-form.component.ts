@@ -3,7 +3,7 @@ import { EmployeeService } from '../../employee.service';
 import { OnInit } from '@angular/core';
 import { employee } from '../../models/employee';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
@@ -14,6 +14,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class EmployeeFormComponent implements OnInit {
   constructor(public employeeService: EmployeeService) {}
   employees: employee[] = [];
+  employeeForm = new FormGroup({
+    name: new FormControl(''),
+    department: new FormControl(''),
+  });
+
   ngOnInit() {
     this.getEmployees();
   }
