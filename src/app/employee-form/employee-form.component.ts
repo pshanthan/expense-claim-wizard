@@ -3,7 +3,7 @@ import { EmployeeService } from '../../employee.service';
 import { OnInit } from '@angular/core';
 import { employee } from '../../models/employee';
 import { CommonModule } from '@angular/common';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
