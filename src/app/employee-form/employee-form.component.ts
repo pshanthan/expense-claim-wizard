@@ -8,6 +8,7 @@ import {
   ReactiveFormsModule,
   FormGroup,
   Validators,
+  FormArray,
 } from '@angular/forms';
 @Component({
   selector: 'app-employee-form',
@@ -23,6 +24,7 @@ export class EmployeeFormComponent implements OnInit {
     name: new FormControl('', Validators.required),
     department: new FormControl(''),
   });
+  expenses = new FormArray([]);
 
   ngOnInit() {
     this.getEmployees();
