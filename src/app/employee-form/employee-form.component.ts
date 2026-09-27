@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmployeeService } from '../../employee.service';
 
 @Component({
   selector: 'app-employee-form',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   standalone: true,
 })
 export class EmployeeFormComponent {
-  constructor() {}
+  constructor(public employeeService: EmployeeService) {}
 }

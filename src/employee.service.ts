@@ -1,6 +1,9 @@
-import { EmployeeFormComponent } from "./app/employee-form/employee-form.component" 
-export class employeeService(){
-getEmployees(){
-    
-}
+import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { employee } from './models/Employee';
+@Injectable({ providedIn: 'root' })
+export class EmployeeService {
+  getEmployees(): Observable<employee[]> {
+    return of([{ id: 1, name: 'jack', department: 'Information Services' }]);
+  }
 }
