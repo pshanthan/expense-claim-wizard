@@ -3,6 +3,13 @@
 </div>
 <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
   <input formControlName="name" placeholder="Name" />
+  <div
+    *ngIf="
+      employeeForm.get('name')?.invalid && employeeForm.get('name')?.touched
+    "
+  >
+    Name is required
+  </div>
   <input formControlName="department" placeholder="Department" />
   <button type="submit" [disabled]="employeeForm.invalid">Save</button>
 </form>
