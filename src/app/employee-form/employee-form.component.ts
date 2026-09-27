@@ -3,11 +3,12 @@ import { EmployeeService } from '../../employee.service';
 import { OnInit } from '@angular/core';
 import { employee } from '../../models/employee';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
   styleUrl: './employee-form.component.css',
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   standalone: true,
 })
 export class EmployeeFormComponent implements OnInit {
