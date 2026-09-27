@@ -27,4 +27,7 @@ export class EmployeeFormComponent implements OnInit {
       this.employees = data;
     });
   }
+  onSubmit() {
+    console.log(this.employeeForm.value);
+  }
 }
