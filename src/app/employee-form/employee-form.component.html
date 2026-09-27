@@ -4,5 +4,5 @@
 <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
   <input formControlName="name" placeholder="Name" />
   <input formControlName="department" placeholder="Department" />
-  <button type="submit">Save</button>
+  <button type="submit" [disabled]="employeeForm.invalid">Save</button>
 </form>
